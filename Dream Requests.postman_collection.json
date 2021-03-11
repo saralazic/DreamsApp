@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "88baf4be-5b79-4dde-a321-a2f6e9fd19d5",
+		"name": "Dream Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dreams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dreams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get dream by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/dreams/6049f51f9f62a045400cb664",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dreams",
+						"6049f51f9f62a045400cb664"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new dream",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"happy dream\",\r\n    \"description\": \"bla bla bla\",\r\n    \"date\": \"2021-03-10\",\r\n    \"type\": \"6049ead67bb2564d9c4ef9f8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/dreams/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dreams",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update dream",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"happy dream no 2\",\r\n    \"description\": \"bla bla bla\",\r\n    \"date\": \"2021-03-10T00:00:00.000Z\",\r\n    \"type\": \"6049ead67bb2564d9c4ef9f8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/dreams/update/6049f51f9f62a045400cb664",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"dreams",
+						"update",
+						"6049f51f9f62a045400cb664"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete dream",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

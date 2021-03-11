@@ -51,7 +51,7 @@ router.route('/update/:id').put((req, res)=>{
 /*DELETE type by id*/ 
 router.route('/:id').delete((req, res) => {
     Type.findByIdAndDelete(req.params.id)
-    .then(() => res.json("Deleted user"))
+    .then(() => res.json("Deleted type"))
     .catch(err => res.status(400).json('Error'+err));
 });
 

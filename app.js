@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var typeRouter = require('./routes/type');
+var dreamRouter = require('./routes/dream')
 
 var app = express();
 
@@ -46,6 +47,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true })
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/types', typeRouter);
+app.use('/dreams', dreamRouter);
 
 
 // catch 404 and forward to error handler
