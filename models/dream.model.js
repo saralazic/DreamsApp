@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 let Type = require('../models/type.model')
 
 const Schema = mongoose.Schema;
@@ -27,6 +28,7 @@ const DreamSchema = new Schema({
 }, {
     timestamps: true
 });
+
 
 const Dream = mongoose.model('Dream', DreamSchema);
 module.exports = Dream;
